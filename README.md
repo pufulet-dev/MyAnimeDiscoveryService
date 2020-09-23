@@ -1,2 +1,2 @@
-# MyAnimeDiscoveryService
+# AnimeDiscoveryService
 Created with CodeSandbox
