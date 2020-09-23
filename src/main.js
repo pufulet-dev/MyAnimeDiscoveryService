@@ -10,7 +10,7 @@ import Show from "./ShowPage.vue";
 import NotFound from "./NotFoundPage.vue";
 
 Vue.use(VueRouter);
-
+//123
 const routes = [
   { path: "/", component: Home },
   { path: "/search", component: Search },
