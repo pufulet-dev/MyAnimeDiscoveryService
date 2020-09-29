@@ -11,7 +11,7 @@
     <div class="about">
       {{description}}
     </div>
-    <router-link to="/show" class="watchButton">
+    <router-link :to="'/show/' + id" class="watchButton">
       <button class="watchButton">Watch Now</button>
     </router-link>
   </div>
@@ -25,6 +25,7 @@ export default {
       cardTitle: "Weathering With You",
       rating: "9/10",
       description: "This is a super short paragraph that should convince you to watch the movie.",
+      id: 63,
     }
   }
 }

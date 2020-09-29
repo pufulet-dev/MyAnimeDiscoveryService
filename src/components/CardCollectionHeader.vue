@@ -1,7 +1,7 @@
 <template>
   <div>
     <span class="collHeader">
-      <h1 class="msg"> {{msg}} </h1>
+      <h1 class="msg"> {{collectionName}} </h1>
       <router-link to="/browse"> <h3 class="seeMore"> See More > </h3> </router-link>
     </span>
   </div>
@@ -10,12 +10,8 @@
 <script>
 export default {
   name: "CardCollectionHeader",
-  data() {
-    return {
-    }
-  },
   props: {
-    msg: String,
+    collectionName: String,
   }
 }
 </script>
@@ -26,8 +22,9 @@ export default {
     justify-content: space-between;
     margin-right: 6%;
     margin-left: 6%;
-    margin-top: 130px;  
+    margin-top: 60px;  
     font-family: 'Oswald', sans-serif;
+    color: black;
     /* background-color: #ea2d2e; */
   }
   .msg {

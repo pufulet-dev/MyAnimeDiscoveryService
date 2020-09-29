@@ -9,14 +9,16 @@ import Browse from "./BrowsePage.vue";
 import Show from "./ShowPage.vue";
 import NotFound from "./NotFoundPage.vue";
 
+import store from "./store/store.js";
+
 Vue.use(VueRouter);
-//123
+
 const routes = [
   { path: "/", component: Home },
   { path: "/search", component: Search },
   { path: "/categories", component: Categories },
   { path: "/browse", component: Browse },
-  { path: "/show", component: Show },
+  { path: "/show/:id", component: Show },
   { path: "*", component: NotFound },
 ];
 
@@ -29,6 +31,7 @@ const router = new VueRouter({
 });
 
 new Vue({
-  render: h => h(App),
-  router: router
+  render: (h) => h(App),
+  router,
+  store
 }).$mount("#app");

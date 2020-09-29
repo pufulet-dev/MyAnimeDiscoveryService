@@ -2,12 +2,9 @@
   <div id="app">
     <HeroSection></HeroSection>
     <span class="allColl">
-      <Header msg="Newest"></Header>
-      <CardCollection></CardCollection>
-      <Header msg="Popular"></Header>
-      <CardCollection></CardCollection>
-      <Header msg="Recently Updated"></Header>
-      <CardCollection></CardCollection>
+      <CardCollection collectionName="Most Popular"/>
+      <CardCollection collectionName="Newest"/>
+      <CardCollection collectionName="Recently Updated"/>
     </span>
     <MoreAnime></MoreAnime>
   </div>
@@ -15,7 +12,6 @@
 
 <script>
 import CardCollection from "./components/CardCollection.vue";
-import Header from "./components/CardCollectionHeader.vue";
 import MoreAnime from "./components/MoreAnimeSection.vue";
 import HeroSection from "./components/HeroSection.vue";
 export default {
@@ -24,12 +20,11 @@ export default {
     return {
     }
   },
+  // props: { collectionName : String },
   components: {
     CardCollection,
-    Header,
     MoreAnime,
     HeroSection,
-    props: { msg: String },
   }
 }
 </script>
@@ -38,5 +33,8 @@ export default {
   .title {
     color: black;
     font-size: 30px;
+  }
+  .allColl {
+    display: inline;
   }
 </style>

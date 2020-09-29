@@ -3,7 +3,7 @@
     <span class="column">
       <SearchCard></SearchCard>
       <SearchCard></SearchCard>
-     <SearchCard></SearchCard>
+      <SearchCard></SearchCard>
     </span>
     <span class="column">
       <SearchCard></SearchCard>

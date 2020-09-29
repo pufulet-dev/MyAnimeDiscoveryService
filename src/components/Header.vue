@@ -31,15 +31,15 @@ export default {
   position: relative;
 }
 .logo {
-  width: 600px;
-  height: 100px;
+  width: 550px;
+  height: 90px;
+  margin-top: 5px;
 }
 .searchIcon {
   width: 30px;
   heigth: 30px;
   margin-left: 100px;
-  margin-right: 30px;
-  margin-top: 35%;
+  margin-top: 40%;
 }
 .option0 {
   --spacing: 66px;
@@ -47,7 +47,7 @@ export default {
   font-size: 20px;
   margin-rigth: var(--spacing);
   margin-left: 500px;
-  margin-top: 6%;
+  margin-top: 5.9%;
 }
 .option1,
 .option2 {
@@ -56,13 +56,12 @@ export default {
   font-size: 20px;
   margin-rigth: 100px;
   margin-left: var(--spacing);
-  margin-top: 6%;
+  margin-top: 5.9%;
 }
 .options {
   display: flex;
   position: absolute;
   right: 5%;
-  top: 3%;
 }
 
 

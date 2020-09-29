@@ -1,12 +1,11 @@
 <template>
   <div>
-    <router-link to="/show">
+    <router-link :to="'/show/'+id">
       <p id="allCard">
         <img 
-          src="https://upload.wikimedia.org/wikipedia/en/6/66/Weathering_with_You_Poster.jpg" 
-          class="cardImage">
+          class="cardImage"
+          :src="`${image}`">
         <span class="title"> {{title}} </span>
-        <span class="title"> {{episodes}} </span>
       </p>
     </router-link>
   </div>
@@ -15,12 +14,7 @@
 <script>
 export default {
   name: "CardComponent",
-  data() {
-    return {
-      title: "Weathering With You",
-      episodes: "[66 episodes]",
-    }
-  }
+  props: { title: String, image: String, id: String },
 }
 </script>
 
@@ -65,5 +59,8 @@ export default {
     margin: 5px;
     letter-spacing: 1px;
     font-weight: bold;
+  }
+  div {
+    color: black;
   }
 </style>
