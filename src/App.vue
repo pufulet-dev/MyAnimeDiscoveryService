@@ -36,6 +36,8 @@ export default {
     color: var(--main-color-text);
     /* text-shadow: 2px 2px 2px black; */
     font-size: 66px;
+    display: block;
+    flex: 1 1 auto;
   }
 
  </style>

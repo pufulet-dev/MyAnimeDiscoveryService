@@ -70,6 +70,7 @@ const homeModule = {
         });
     },
   fetchNewest: function (context) {
+      context.state.startDate = [];
       axios
         .get(
           "https://kitsu.io/api/edge/anime?page[limit]=6&page[offset]=0&sort=-startDate"
@@ -82,6 +83,7 @@ const homeModule = {
         });
     },
     fetchUpdated(context) {
+      context.state.saveCollection = [];
       axios
         .get(
           "https://kitsu.io/api/edge/anime?page[limit]=6&page[offset]=0&sort=-updatedAt"
