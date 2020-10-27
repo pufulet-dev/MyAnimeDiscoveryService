@@ -37,19 +37,20 @@ export default {
 <style>
   @import "https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap";
   #footer {
-    display:in-line;
     background: black;
+    /* heigth: 200px; */
     margin: 27px;
   }
   .links {
     font-size: 30px;
     text-decoration: none;
-    color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: center;
     font-family: 'Indie Flower', cursive;
     color:  white;
-    margin: 30px;
+    width: 100%;
+    margin: 20px;
   }
   .media {
     margin-left: 60px;

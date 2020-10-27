@@ -1,16 +1,19 @@
 <template>
   <div id="searchCard">
     <img 
-      src="https://upload.wikimedia.org/wikipedia/en/6/66/Weathering_with_You_Poster.jpg" 
+      :src="`${image}`"
       class="searchImage">
-    <p class="searchTitle"> {{cardTitle}} </p>
+    <p class="searchTitle"> {{title}} </p>
     <div class="rating">
       <p class="ratingValue"> {{rating}} </p>
       <img src="https://image.flaticon.com/icons/png/512/130/130188.png" class="star">
     </div>
-    <div class="about">
-      {{description}}
-    </div>
+    <p>
+      <div class="about">
+        {{description}} 
+      </div>
+      <!-- <p class="dots"> ... </p> -->
+    </p>
     <router-link :to="'/show/' + id" class="watchButton">
       <button class="watchButton">Watch Now</button>
     </router-link>
@@ -22,12 +25,9 @@ export default {
   name: "SearchCardComponent",
   data() {
     return {
-      cardTitle: "Weathering With You",
-      rating: "9/10",
-      description: "This is a super short paragraph that should convince you to watch the movie.",
-      id: 63,
     }
-  }
+  },
+  props: { title: String, image: String, id: String, description: String, rating: String,},
 }
 </script>
 
@@ -85,6 +85,19 @@ export default {
     margin-bottom: 5px;
     margin-left: 10px;
     margin-right: 10px;
+
+    /* height: 60px;
+    line-height: 20px;
+    overflow: hidden; */
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+  }
+  .dots {
+    color: black;
   }
   .watchButton {
     grid-area: 5 / 3 / 6 / 4;

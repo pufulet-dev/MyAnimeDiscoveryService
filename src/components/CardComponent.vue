@@ -21,11 +21,13 @@ export default {
 <style>
   .cardImage {
     border: black;
-    height: 250px;
-    width: auto;
+    height: auto;
+    width: 160px;;
   }
   #allCard {
-    background: #ffffff;
+    height: 287px;
+    text-decoration: none;
+    background: rgb(218, 216, 216);
     display: inline-block;
     margin: 15px 25px 17px;
     padding: 19px 15px 6px;
@@ -54,13 +56,9 @@ export default {
   .title {
     font-family: 'Playfair Display', serif;
     font-size: 15px;
-    /* text-shadow: 2px 2px 5px #ea2d2e;  */
-    /* line-height: 10px; */
+    text-decoration: none;
     margin: 5px;
     letter-spacing: 1px;
     font-weight: bold;
-  }
-  div {
-    color: black;
   }
 </style>

@@ -21,9 +21,10 @@ export default {
     return {
     }
   },
+  props: { title: String, image: String, id: String },
   components: {
     SearchCard,
-  }
+  },
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="myApp">
     <Header></Header>
     <router-view></router-view>
     <Footer></Footer>
@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss">
   @import '../public/reset.css';
-  #app {
+  #myApp {
     --main-color-text: white;
     /* font-family: "Avenir", Helvetica, Arial, sans-serif; */
     -webkit-font-smoothing: antialiased;
@@ -38,6 +38,15 @@ export default {
     font-size: 66px;
     display: block;
     flex: 1 1 auto;
+    background-image: url("https://www.technocrazed.com/wp-content/uploads/2015/12/Brick-wallaper-For-Background-1.jpg");
+    /* background-repeat: no-repeat;   */
+    background-size: contain;
+    background-position: center center; 
+    /* background-opacity: 0.9; */
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
   }
 
  </style>

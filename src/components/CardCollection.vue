@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <span>
+  <div id="wrapperCol">
+    <span class="all">
       <Header :collectionName="collectionName"></Header>
       <div class="cards"> 
         <CardComponent v-for="item in items" 
@@ -52,10 +52,15 @@ export default {
 </script>
 
 <style>
+  #wrapperCol {
+    /* width: 80%; */
+  }
   .cards {
     display: flex;
     justify-content: space-around;
-    margin: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 20px;
     color: black;
   }
 </style>

@@ -20,11 +20,11 @@ export default {
   .collHeader {
     display: flex;
     justify-content: space-between;
-    margin-right: 6%;
-    margin-left: 6%;
-    margin-top: 60px;  
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 30px;  
     font-family: 'Oswald', sans-serif;
-    color: black;
+    color: white;
     /* background-color: #ea2d2e; */
   }
   .msg {

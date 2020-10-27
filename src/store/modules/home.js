@@ -83,7 +83,7 @@ const homeModule = {
         });
     },
     fetchUpdated(context) {
-      context.state.saveCollection = [];
+      context.state.updatedAt = [];
       axios
         .get(
           "https://kitsu.io/api/edge/anime?page[limit]=6&page[offset]=0&sort=-updatedAt"
