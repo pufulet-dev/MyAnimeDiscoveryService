@@ -53,7 +53,7 @@ const homeModule = {
       axios
         .get("https://kitsu.io/api/edge/trending/anime")
         .then(function ({ data }) {
-          context.commit("saveHero", data.data[1]);
+          context.commit("saveHero", data.data[3]);
         });
     },
     fetchPopular: function (context) {
@@ -86,7 +86,7 @@ const homeModule = {
       context.state.updatedAt = [];
       axios
         .get(
-          "https://kitsu.io/api/edge/anime?page[limit]=6&page[offset]=0&sort=-updatedAt"
+          "https://kitsu.io/api/edge/anime?page[limit]=6&page[offset]=0&sort=updatedAt"
         )
         .then(function ({ data }) {
           context.state.recentCategory = "updatedAt";

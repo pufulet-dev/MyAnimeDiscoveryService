@@ -28,39 +28,41 @@ export default {
 
 #header {
   display:flex;
-  margin: 27px;
+  margin-bottom: 10px;
   background: black;
   position: relative;
 }
 .logo {
-  width: 550px;
-  height: 90px;
-  margin-top: 5px;
+  width: 300px;
+  height: 55px;
+  margin-top: 10px;
+  margin-left: 30px;
 }
 .searchIcon {
-  width: 30px;
-  heigth: 30px;
-  margin-left: 100px;
-  margin-top: 40%;
+  width: 22px;
+  height: 25px;
+  margin-left: 55px;
+  margin-top: 0;
+  margin-right: 30px;
 }
 .option0 {
   --spacing: 66px;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   margin-rigth: var(--spacing);
   margin-left: 500px;
-  margin-top: 5.9%;
-      font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 4%;
+  font-family: 'Source Sans Pro', sans-serif;
 
 }
 .option1,
 .option2 {
   --spacing: 66px;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   margin-rigth: 100px;
   margin-left: var(--spacing);
-  margin-top: 5.9%;
+  margin-top: 4%;
       font-family: 'Source Sans Pro', sans-serif;
 
 }

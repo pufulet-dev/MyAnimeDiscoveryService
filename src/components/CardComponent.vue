@@ -5,7 +5,9 @@
         <img 
           class="cardImage"
           :src="`${image}`">
-        <span class="title"> {{title}} </span>
+        <span class="titleOfCard"> {{title}} </span>
+        <span v-if="nrep!=null" class="nrOfEpisodes"> episodes: {{nrep}} </span>
+        <span v-else class="nrOfEpisodes"> movie </span>
       </p>
     </router-link>
   </div>
@@ -14,7 +16,12 @@
 <script>
 export default {
   name: "CardComponent",
-  props: { title: String, image: String, id: String },
+  props: { title: String, image: String, id: String, nrep: String },
+  data() {
+    return {
+      nrep: "10",
+    }
+  }
 }
 </script>
 
@@ -22,15 +29,20 @@ export default {
   .cardImage {
     border: black;
     height: auto;
-    width: 160px;;
+    width: 90px;
+    /* position: center; */
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 1px;
   }
   #allCard {
-    height: 287px;
+    height: 210px;
+    width: 110px;
     text-decoration: none;
     background: rgb(218, 216, 216);
-    display: inline-block;
-    margin: 15px 25px 17px;
-    padding: 19px 15px 6px;
+    /* display: inline-block; */
+    /* margin: 6px 6px 6px; */
+    padding: 8px 5px 0px;
     text-align: center;
     text-decoration: none;
     -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
@@ -40,9 +52,7 @@ export default {
     -moz-transition: all .20s linear;
     transition: all .20s linear;
     z-index: 0;
-    /* position: relative; */
     display: inline-grid;
-    max-width: min-content;
   }
   #allCard:hover {
     -webkit-transform: scale(1.1);
@@ -53,12 +63,22 @@ export default {
     -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
     box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
  }
-  .title {
+  .titleOfCard {
     font-family: 'Playfair Display', serif;
-    font-size: 15px;
-    text-decoration: none;
-    margin: 5px;
-    letter-spacing: 1px;
+    font-size: 14px;
+    width: 110px;
+    color:black;
+    text-decoration: none!important;
+    text-align: center;
     font-weight: bold;
+  }
+  .nrOfEpisodes {
+    font-family: 'Playfair Display', serif;
+    font-size: 10px;
+    width: 110px;
+    color:black;
+    text-decoration: none!important;
+    text-align: center;
+    margin-top: -10px;
   }
 </style>
